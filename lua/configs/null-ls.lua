@@ -15,6 +15,7 @@ local options = {
     null_ls.builtins.code_actions.refactoring,
     null_ls.builtins.formatting.prettier,
     null_ls.builtins.code_actions.refactoring,
+    null_ls.builtins.formatting.eslint_d
   },
 
   on_attach = function(client, bufnr)
