@@ -67,4 +67,10 @@ return {
       require("gitsigns").setup(opts)
     end,
   },
+  {
+    "MunifTanjim/eslint.nvim",
+    config = function()
+      require "configs.eslint"
+    end,
+  },
 }
