@@ -15,7 +15,10 @@ local options = {
     null_ls.builtins.code_actions.refactoring,
     null_ls.builtins.formatting.prettier,
     null_ls.builtins.code_actions.refactoring,
-    null_ls.builtins.formatting.eslint_d
+    require("none-ls.code_actions.eslint"),
+    require("none-ls.diagnostics.eslint"),
+    require("none-ls.formatting.eslint"),
+
   },
 
   on_attach = function(client, bufnr)

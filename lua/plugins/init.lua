@@ -26,6 +26,7 @@ return {
         "prettier",
         "gopls",
         "golangci-lint",
+        "json-lsp"
       },
     },
   },
@@ -46,6 +47,9 @@ return {
   {
     "nvimtools/none-ls.nvim",
     event = "BufWritePre", -- uncomment for format on save
+    dependencies = {
+      "nvimtools/none-ls-extras.nvim",
+    },
     config = function()
       require "configs.null-ls"
     end,
@@ -65,12 +69,6 @@ return {
     config = function(_, opts)
       dofile(vim.g.base46_cache .. "git")
       require("gitsigns").setup(opts)
-    end,
-  },
-  {
-    "MunifTanjim/eslint.nvim",
-    config = function()
-      require "configs.eslint"
     end,
   },
 }
