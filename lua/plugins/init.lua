@@ -26,7 +26,7 @@ return {
         "prettier",
         "gopls",
         "golangci-lint",
-        "json-lsp"
+        "json-lsp",
       },
     },
   },
@@ -71,4 +71,21 @@ return {
       require("gitsigns").setup(opts)
     end,
   },
+
+  -- {
+  --   "VidocqH/lsp-lens.nvim",
+  --   enabled = true,
+  --   lazy = false,
+  --   config = function()
+  --     require("lsp-lens").setup {}
+  --   end,
+  -- },
+
+  -- {
+  --   "Wansmer/symbol-usage.nvim",
+  --   event = "BufReadPre", -- need run before LspAttach if you use nvim 0.9. On 0.10 use 'LspAttach'
+  --   config = function()
+  --     require "configs.symbol-usage"
+  --   end,
+  -- },
 }
